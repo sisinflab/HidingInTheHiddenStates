@@ -62,7 +62,7 @@ def main(llm_name, model, tokenizer):
             model=model,
             tokenizer=tokenizer,
         )
-        if result is not None:
+        if result is not False:
             dataset.append((template.format(symbol), 1))
             sentence, prob, _, _ = result
             dataset.append((sentence, 0))

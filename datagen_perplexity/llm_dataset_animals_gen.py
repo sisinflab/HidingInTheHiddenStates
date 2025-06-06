@@ -35,9 +35,10 @@ def main(llm_name, model, tokenizer):
         )
         if result is not False:
             dataset.append((template.format(animal_class), 1))
+            print("True: " + template.format(animal_class))
             sentence, prob, _, _ = result
             dataset.append((sentence, 0))
-            print(sentence)
+            print("False: " + sentence)
             print(prob)
 
         # Habitat
